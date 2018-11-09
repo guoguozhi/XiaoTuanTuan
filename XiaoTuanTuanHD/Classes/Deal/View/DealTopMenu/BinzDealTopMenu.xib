@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BinzDealTopMenu">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ui-qh-86j" userLabel="分割线">
+                    <rect key="frame" x="2" y="2" width="1" height="26"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="CM5-gd-8X7"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wo-Qh-bBB" userLabel="图标按钮">
+                    <rect key="frame" x="3" y="0.0" width="147" height="30"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" image="icon_category_0"/>
+                    <state key="highlighted" image="icon_category_highlighted_0"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大分类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNj-ML-XBo" userLabel="标题">
+                    <rect key="frame" x="53" y="1" width="97" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="sbN-I8-u5s"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小分类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHw-pW-wNu" userLabel="子标题">
+                    <rect key="frame" x="53" y="15" width="97" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="pcz-Zj-X69"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HHw-pW-wNu" secondAttribute="bottom" constant="1" id="1LP-yv-N9t"/>
+                <constraint firstItem="rNj-ML-XBo" firstAttribute="leading" secondItem="4ui-qh-86j" secondAttribute="trailing" constant="50" id="2fe-9f-nUh"/>
+                <constraint firstItem="2wo-Qh-bBB" firstAttribute="leading" secondItem="4ui-qh-86j" secondAttribute="trailing" id="AFo-37-NWC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2wo-Qh-bBB" secondAttribute="bottom" id="DWX-jZ-kFX"/>
+                <constraint firstItem="HHw-pW-wNu" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="NPW-wl-Eaa"/>
+                <constraint firstItem="HHw-pW-wNu" firstAttribute="leading" secondItem="4ui-qh-86j" secondAttribute="trailing" constant="50" id="OtM-2N-yxO"/>
+                <constraint firstItem="4ui-qh-86j" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="2" id="e03-51-eQX"/>
+                <constraint firstItem="4ui-qh-86j" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="2" id="i4l-4h-yXE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4ui-qh-86j" secondAttribute="bottom" constant="2" id="meq-nS-4wc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2wo-Qh-bBB" secondAttribute="trailing" id="qsa-nl-oxP"/>
+                <constraint firstItem="rNj-ML-XBo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="1" id="ryp-au-cDT"/>
+                <constraint firstItem="2wo-Qh-bBB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="t3I-w1-fHh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rNj-ML-XBo" secondAttribute="trailing" id="zUq-VC-R4X"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imageButton" destination="2wo-Qh-bBB" id="8OR-ST-15k"/>
+                <outlet property="subtitleLabel" destination="HHw-pW-wNu" id="tk8-US-fs1"/>
+                <outlet property="titleLabel" destination="rNj-ML-XBo" id="zq3-f0-hzv"/>
+            </connections>
+            <point key="canvasLocation" x="-263" y="-107"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_category_0" width="30" height="30"/>
+        <image name="icon_category_highlighted_0" width="30" height="30"/>
+    </resources>
+</document>

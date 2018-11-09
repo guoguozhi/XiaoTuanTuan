@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BinzCityViewController">
+            <connections>
+                <outlet property="cover" destination="AcJ-hP-YhT" id="wgg-6P-gXf"/>
+                <outlet property="customNavigationBar" destination="kcV-Oe-VTQ" id="nba-4Q-cq6"/>
+                <outlet property="customNavigationBarTopLC" destination="v5a-ud-lSQ" id="LfY-92-LyY"/>
+                <outlet property="searchBar" destination="cjC-k6-IIk" id="c7X-d6-g2c"/>
+                <outlet property="tableView" destination="f1j-Av-fim" id="LIb-0O-19w"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" userLabel="控制器的view">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcV-Oe-VTQ" userLabel="导航条">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_navigationBar_normal" translatesAutoresizingMaskIntoConstraints="NO" id="auS-m4-jKQ" userLabel="导航条背景">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="切换城市" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgY-Il-BZE" userLabel="标题">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VX2-Tk-u2l" userLabel="关闭">
+                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="64" id="ys0-xx-Ceb"/>
+                            </constraints>
+                            <state key="normal" image="btn_navigation_close"/>
+                            <state key="highlighted" image="btn_navigation_close_hl"/>
+                            <connections>
+                                <action selector="dissmissCityList:" destination="-1" eventType="touchUpInside" id="3iO-7H-3Ja"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="auS-m4-jKQ" firstAttribute="top" secondItem="kcV-Oe-VTQ" secondAttribute="top" id="9eJ-U1-cL8"/>
+                        <constraint firstItem="VX2-Tk-u2l" firstAttribute="leading" secondItem="kcV-Oe-VTQ" secondAttribute="leading" id="Afs-wl-Jlp"/>
+                        <constraint firstItem="LgY-Il-BZE" firstAttribute="top" secondItem="kcV-Oe-VTQ" secondAttribute="top" id="As3-T6-5i8"/>
+                        <constraint firstAttribute="height" constant="64" id="FIj-2f-Rrx"/>
+                        <constraint firstAttribute="trailing" secondItem="LgY-Il-BZE" secondAttribute="trailing" id="RdU-pB-lUH"/>
+                        <constraint firstItem="VX2-Tk-u2l" firstAttribute="top" secondItem="kcV-Oe-VTQ" secondAttribute="top" id="ahw-fn-7cq"/>
+                        <constraint firstAttribute="bottom" secondItem="VX2-Tk-u2l" secondAttribute="bottom" id="b4A-V0-eA2"/>
+                        <constraint firstAttribute="bottom" secondItem="LgY-Il-BZE" secondAttribute="bottom" id="cd5-C3-mUb"/>
+                        <constraint firstAttribute="trailing" secondItem="auS-m4-jKQ" secondAttribute="trailing" id="eMB-vf-BRf"/>
+                        <constraint firstItem="LgY-Il-BZE" firstAttribute="leading" secondItem="kcV-Oe-VTQ" secondAttribute="leading" id="ffw-Of-Em3"/>
+                        <constraint firstAttribute="bottom" secondItem="auS-m4-jKQ" secondAttribute="bottom" id="qKD-HB-iOQ"/>
+                        <constraint firstItem="auS-m4-jKQ" firstAttribute="leading" secondItem="kcV-Oe-VTQ" secondAttribute="leading" id="sEW-TO-gsY"/>
+                    </constraints>
+                </view>
+                <searchBar contentMode="redraw" placeholder="请输入城市名或拼音" backgroundImage="bg_login_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="cjC-k6-IIk" userLabel="搜索条">
+                    <rect key="frame" x="10" y="74" width="300" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="tMD-1y-IYw"/>
+                    </constraints>
+                    <color key="barTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="jjc-CT-v0s"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f1j-Av-fim" userLabel="表格">
+                    <rect key="frame" x="10" y="128" width="300" height="430"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="5DC-mo-MPl"/>
+                        <outlet property="delegate" destination="-1" id="uAP-bm-28O"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcJ-hP-YhT" userLabel="蒙版">
+                    <rect key="frame" x="0.0" y="128" width="320" height="440"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="coverDidClick:" destination="-1" eventType="touchUpInside" id="YYA-85-Wd0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="kcV-Oe-VTQ" secondAttribute="trailing" id="1Wy-dj-nRY"/>
+                <constraint firstAttribute="trailing" secondItem="AcJ-hP-YhT" secondAttribute="trailing" id="80z-yh-OEa"/>
+                <constraint firstItem="cjC-k6-IIk" firstAttribute="top" secondItem="kcV-Oe-VTQ" secondAttribute="bottom" constant="10" id="CAN-9f-JTS"/>
+                <constraint firstAttribute="bottom" secondItem="f1j-Av-fim" secondAttribute="bottom" constant="10" id="LfZ-JH-KqT"/>
+                <constraint firstItem="f1j-Av-fim" firstAttribute="top" secondItem="cjC-k6-IIk" secondAttribute="bottom" constant="10" id="O3u-c2-fin"/>
+                <constraint firstItem="AcJ-hP-YhT" firstAttribute="top" secondItem="cjC-k6-IIk" secondAttribute="bottom" constant="10" id="Wra-Vz-B8Z"/>
+                <constraint firstAttribute="trailing" secondItem="f1j-Av-fim" secondAttribute="trailing" constant="10" id="XrS-Lf-6Ob"/>
+                <constraint firstAttribute="bottom" secondItem="AcJ-hP-YhT" secondAttribute="bottom" id="dVU-xj-ri6"/>
+                <constraint firstItem="f1j-Av-fim" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="eIH-fG-Clm"/>
+                <constraint firstItem="AcJ-hP-YhT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mOG-3N-Jzm"/>
+                <constraint firstItem="kcV-Oe-VTQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="v1W-os-Ogl"/>
+                <constraint firstItem="kcV-Oe-VTQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="v5a-ud-lSQ" userLabel="导航条顶部的约束"/>
+                <constraint firstAttribute="trailing" secondItem="cjC-k6-IIk" secondAttribute="trailing" constant="10" id="xKf-d9-lMO"/>
+                <constraint firstItem="cjC-k6-IIk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="xrs-eN-jK9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_login_textfield" width="8" height="52"/>
+        <image name="bg_navigationBar_normal" width="124" height="124"/>
+        <image name="btn_navigation_close" width="30" height="30"/>
+        <image name="btn_navigation_close_hl" width="30" height="30"/>
+    </resources>
+</document>

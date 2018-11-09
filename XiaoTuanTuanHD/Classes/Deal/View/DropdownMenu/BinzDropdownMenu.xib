@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BinzDropdownMenu">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Ip-Sk-TJ9" userLabel="大分类">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="400"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="TmT-6c-g12"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="MHb-9G-etr"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G4G-UZ-Qqq" userLabel="小分类">
+                    <rect key="frame" x="200" y="0.0" width="200" height="400"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="XGE-ED-82y"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="q6P-Gb-n9o"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6Ip-Sk-TJ9" secondAttribute="bottom" id="3kP-Kz-9ZP"/>
+                <constraint firstItem="6Ip-Sk-TJ9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="K9R-Jb-OCo"/>
+                <constraint firstItem="G4G-UZ-Qqq" firstAttribute="leading" secondItem="6Ip-Sk-TJ9" secondAttribute="trailing" id="SE9-rc-5mK"/>
+                <constraint firstItem="G4G-UZ-Qqq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="WcU-eD-GUw"/>
+                <constraint firstItem="6Ip-Sk-TJ9" firstAttribute="width" secondItem="G4G-UZ-Qqq" secondAttribute="width" id="ZDb-q7-pxA"/>
+                <constraint firstItem="G4G-UZ-Qqq" firstAttribute="leading" secondItem="6Ip-Sk-TJ9" secondAttribute="trailing" id="kQ6-G9-Oh5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="G4G-UZ-Qqq" secondAttribute="trailing" id="kx2-u6-965"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="G4G-UZ-Qqq" secondAttribute="bottom" id="rXJ-R0-pB0"/>
+                <constraint firstItem="6Ip-Sk-TJ9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wmb-Ty-Pca"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="mainTableView" destination="6Ip-Sk-TJ9" id="fxb-90-OQI"/>
+                <outlet property="subTableView" destination="G4G-UZ-Qqq" id="66A-XQ-MSk"/>
+            </connections>
+            <point key="canvasLocation" x="51" y="-213"/>
+        </view>
+    </objects>
+</document>

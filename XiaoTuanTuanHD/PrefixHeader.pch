@@ -1,0 +1,112 @@
+//
+//  PrefixHeader.pch
+//  XiaoTuanTuanHD
+//
+//  Created by 张彬 on 2018/8/11.
+//  Copyright © 2018年 bin.z. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
+#ifdef __OBJC__
+
+#import "UIView+Extension.h"
+#import "UIButton+Extension.h"
+#import "UIView+AutoLayout.h"
+#import "UIBarButtonItem+Extension.h"
+#import "JZNavigationExtension.h"
+#import "MBProgressHUD+NJ.h"
+
+#ifdef DEBUG
+#define BinzLog(...) NSLog(__VA_ARGS__)
+#else
+#define BinzLog(...)
+#endif
+
+/******************************************颜色*******************************************/
+// 颜色
+#define BinzRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+// 随机色
+#define BinzRandomColor BinzRGBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+// 全局颜色
+#define BinzGlobalColor BinzRGBColor(230, 230, 230)
+/****************************************屏幕尺*****************************************/
+// iOS7及以上版本
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+
+// iOS8及以上版本
+#define iOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
+
+// 4-inch屏幕
+#define FourInchScreen ([UIScreen mainScreen].bounds.size.height == 568.0)
+// UIScreen相关
+// 屏幕的宽度
+#define BinzScreenWidth [UIScreen mainScreen].bounds.size.width
+// 屏幕的高度
+// UIScreen相关
+#define BinzScreenHeight [UIScreen mainScreen].bounds.size.height
+
+// 沙盒
+#define BinzSandBoxPath NSHomeDirectory()
+// 文档位置
+#define BinzDocumentDirectoryPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+// keyWindow
+#define BinzKeyWindow [UIApplication sharedApplication].keyWindow
+
+// 通知
+#define BinzNotificationCenter [NSNotificationCenter defaultCenter]
+/** 用observer的selector方法来监听forNotificationName通知 */
+#define BinzAddObserver(observer, methodName, forNotificationName) ([BinzNotificationCenter addObserver:observer selector:@selector(methodName) name:forNotificationName object:nil])
+/** 添加当前对象为观察者 */
+#define BinzAddSelfAsObserver(methodName, forNotificationName) BinzAddObserver(self, methodName, forNotificationName)
+/** 移除self作为监听者 */
+#define BinzRemoveSelfAsObserver ([BinzNotificationCenter removeObserver:self])
+// 分类
+// 分类选中通知
+#define BinzCategoryDidSelectNotification @"BinzCategoryDidSelectNotification"
+// 大分类选中的key
+#define BinzSelectedMainCategory @"BinzSelectedMainCategory"
+// 小分类选中的key
+#define BinzSelectedSubCategory @"BinzSelectedSubCategory"
+
+// 城市
+// 区域选中通知
+#define BinzRegionDidSelectNotification @"BinzRegionDidSelectNotification"
+// 区域选中的key
+#define BinzSelectedRegion @"BinzSelectedRegion"
+// 子区域选中的key
+#define BinzSelectedSubRegion @"BinzSelectedSubRegion"
+// 选中城市通知
+#define BinzCityDidSelectNotification @"BinzCityDidSelectNotification"
+// 城市选中的Key
+#define BinzSelectedCity @"BinzSelectedCity"
+
+// 排序
+// 选中排序通知
+#define BinzSortDidSelectNotification @"BinzSortDidSelectNotification"
+// 排序选中的key
+#define BinzSelectedSort @"BinzSelectedSort"
+// 默认显示城市名称
+#define BinzDefaultCityName @"北京"
+// 默认最近访问的城市个数
+#define BinzDefaultRecentVisitNumberOfCities 5
+
+#pragma mark - 其他
+
+#define binzUserDefaults [NSUserDefaults standardUserDefaults]
+// 元数据工具对象
+#define binzMetaDataTool [BinzMetaDataTool shareMetaDataTool]
+// 本地团购数据工具对象
+#define binzLocalDealTool [BinzLocalDealTool shareLocalDealTool]
+
+
+// user目录
+#define UserDirectory [BinzDocumentDirectoryPath stringByAppendingPathComponent:@"user"]
+
+#endif
